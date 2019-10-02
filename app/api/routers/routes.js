@@ -24,10 +24,11 @@ module.exports = function(app) {
         var conten_iklan = req.body.conten_iklan;
         var counter_max = req.body.counter_max;
         var jumlah_hari = req.body.jumlah_hari;
+        var type_iklan_s = req.body.type_iklan;
 
         /* initition id for primary key */
         
-        advCont.WriteToDb(conten_iklan, counter_max, jumlah_hari);
+        advCont.WriteToDb(conten_iklan, counter_max, jumlah_hari, type_iklan_s);
 
         console.log("ci "+conten_iklan+" cm : "+counter_max );
         res.send(conten_iklan+' halo '+counter_max);
