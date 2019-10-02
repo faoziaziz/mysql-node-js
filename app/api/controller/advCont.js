@@ -13,7 +13,7 @@ exports.WriteToDb = function(data_iklan, max_count, jumlah_hari, type_iklan_s){
         var counting = parseInt(max_count);
         var max_counting = parseInt(max_count);
         var iklan_type = parseInt(type_iklan_s);
-        var sql ="insert into IklanNeira(idiklan, conten_iklan, counting, max_counting, iklan_type)values (?) ";
+        var sql ="insert into NeiraIklan(idiklan, conten_iklan, counting, max_counting, iklan_type)values (?) ";
         var values = [idiklan, conten_iklan, counting, max_counting, iklan_type];
         connection.query(sql, [values], function(err, result){
             if(err)throw err;
