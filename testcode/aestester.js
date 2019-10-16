@@ -28,6 +28,7 @@ var key_256_buffer = Buffer.from(key_256);
 var key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
  
 // Convert text to bytes
+
 var text = 'tanjngerlqwkqlwkqlwkqlwkqlwkl';
 var textBytes = aesjs.utils.utf8.toBytes(text);
  
@@ -37,13 +38,13 @@ var encryptedBytes = aesCtr.encrypt(textBytes);
  
 // To print or store the binary data, you may convert it to hex
 var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
-console.log(encryptedHex);
+console.log(typeof encryptedHex);
 // "a338eda3874ed884b6199150d36f49988c90f5c47fe7792b0cf8c7f77eeffd87
 //  ea145b73e82aefcf2076f881c88879e4e25b1d7b24ba2788"
  
 // When ready to decrypt the hex string, convert it back to bytes
 var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
- 
+//console.log(encryptedBytes)
 // The counter mode of operation maintains internal state, so to
 // decrypt a new instance must be instantiated.
 var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
