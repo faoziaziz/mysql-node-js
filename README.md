@@ -16,3 +16,23 @@ CREATE TABLE NeiraIklan (
 ); 
 
 ```
+
+just for testing database 
+
+```sql
+CREATE TABLE `NeiraIklanVer2Redeem` (
+	`Id` INT(11) NOT NULL AUTO_INCREMENT,
+	`UUID` VARCHAR(50) NULL DEFAULT NULL,
+	`Flag` VARCHAR(50) NULL DEFAULT NULL,
+	INDEX `Id` (`Id`)
+)
+ENGINE=InnoDB;
+```
+
+Redem table atau yang disebut sebagai NeiraIklanVer2Redeem merupakan table untuk storage data dari device ke Server.
+Flag dari redem adalah sebagai berikut.
+
+Flag Value|Deskription
+-----------|----------
+0         | Not Redeem Yet
+1          | Sudah diredeem
