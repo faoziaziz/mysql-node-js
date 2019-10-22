@@ -36,3 +36,12 @@ Flag Value|Deskription
 -----------|----------
 0         | Not Redeem Yet
 1          | Sudah diredeem
+
+
+Store Table dari server
+
+Flag Value | Deskription
+-----------|------------
+0           | Belum di Download
+1           | Sudah di Download
+2           | Sudah di Redeem

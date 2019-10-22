@@ -22,16 +22,16 @@ module.exports = function(app) {
 
         /*declare variable */
         var conten_iklan = req.body.conten_iklan;
-        var counter_max = req.body.counter_max;
-        var jumlah_hari = req.body.jumlah_hari;
-        var type_iklan_s = req.body.type_iklan;
+        var iklantype = req.body.iklantype;
+        var tanggal_kadaluarsa = req.body.ex_date;
+        var flag = req.body.flag;
 
         /* initition id for primary key */
         
-        advCont.WriteToDb(conten_iklan, counter_max, jumlah_hari, type_iklan_s);
+        advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag);
 
-        console.log("ci "+conten_iklan+" cm : "+counter_max );
-        res.send(conten_iklan+' halo '+counter_max);
+        res.send("crotttt")
+
     });
 
 
