@@ -1,7 +1,6 @@
 # mysql-node-js
 
-
-Just remminder that this program still not on progress.
+Neira aplikasis
 
 
 ```sql
