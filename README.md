@@ -45,3 +45,17 @@ Flag Value | Deskription
 0           | Belum di Download
 1           | Sudah di Download
 2           | Sudah di Redeem
+
+Post http://52.187.1.94:7269/api/iklanneira 
+
+contoh post json dengan iklan neiras
+```json
+
+{
+	"conten_iklan": "random",
+	"iklantype":  3,
+	"ex_date": "2018-12-31T13:05:21",
+	"flag": 1
+}
+
+```
