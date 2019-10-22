@@ -15,7 +15,11 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
     /* Ecripted */
     var textBytes = aesjs.utils.utf8.toBytes(teks_uuid);
     var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
-    var encryptedUUID = aesCtr.encrypt(textBytes);
+    var encryptedBytes = aesCtr.encrypt(textBytes);
+ 
+    // To print or store the binary data, you may convert it to hex
+    var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+    var encryptedUUID = aesjs.utils.hex.toBytes(encryptedHex);
 
     /* date variable for expiring */
     var expiry_date = Date.parse(tanggal_kadaluarsa);
