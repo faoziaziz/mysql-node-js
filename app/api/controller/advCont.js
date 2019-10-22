@@ -40,6 +40,7 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
         var sql = "insert into NeiraIklanVer2(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag)values (?) ";
         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, expiry_date, iklan_type, flag];
 
+        console.values(values)
 
         /* enter connection to query */
         connection.query(sql, [values], function (err, result) {
