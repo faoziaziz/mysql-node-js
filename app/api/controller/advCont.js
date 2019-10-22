@@ -10,7 +10,7 @@ var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost) {
    // console.log("DI : " + data_iklan + " MC :" + max_count + " jH " + tanggal_kadaluarsa);
     /*create connection to database */
-    teks_uuid = uuidv1()
+    var teks_uuid = uuidv1()
 
     /* Ecripted */
     var textBytes = aesjs.utils.utf8.toBytes(teks_uuid);
