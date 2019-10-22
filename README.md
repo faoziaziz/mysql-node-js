@@ -6,14 +6,22 @@ Just remminder that this program still not on progress.
 
 ```sql
 
-CREATE TABLE NeiraIklan (
-    idiklan int(11)  NOT NULL,
-    conten_iklan varchar(100) NOT NULL,
-    counting int,
-    max_counting int,
-    iklan_type int,
-    PRIMARY KEY (idiklan)
-); 
+CREATE TABLE `NeiraIklanVer2` (
+	`NO` INT(11) NOT NULL AUTO_INCREMENT,
+	`ID_TGL` INT(11) NULL DEFAULT NULL,
+	`UUID` CHAR(50) NULL DEFAULT NULL,
+	`UUID_ENC` CHAR(72) NULL DEFAULT NULL,
+	`Content` CHAR(255) NULL DEFAULT NULL,
+	`ExpiryDate` DATETIME NULL DEFAULT NULL,
+	`TipeIklan` INT(11) NOT NULL DEFAULT '0',
+	`Flag` TINYINT(4) NULL DEFAULT '0',
+	PRIMARY KEY (`NO`)
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2
+;
+
 
 ```
 
