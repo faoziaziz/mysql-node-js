@@ -7,6 +7,7 @@ const uuidv1 = require('uuid/v1');
 var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 
+
 exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost, cpuid) {
    // console.log("DI : " + data_iklan + " MC :" + max_count + " jH " + tanggal_kadaluarsa);
     /*create connection to database */

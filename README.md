@@ -63,7 +63,7 @@ contoh post json dengan iklan neiras
 	"iklantype":  3,
 	"ex_date": "2018-12-31T13:05:21",
 	"flag": 1,
-	"cpuid": "123456789012345";
+	"cpuid": "123456789012345"
 }
 
 ```
@@ -83,7 +83,7 @@ contoh post json dengan iklan neiras
 	"iklantype":  3,
 	"ex_date": "2018-12-31T13:05:21",
 	"flag": 1,
-	"cpuid": "123456789012345";
+	"cpuid": "123456789012345"
 }
 
 ```
