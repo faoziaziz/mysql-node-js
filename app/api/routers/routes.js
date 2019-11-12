@@ -25,10 +25,28 @@ module.exports = function(app) {
         var iklantype = req.body.iklantype;
         var tanggal_kadaluarsa = req.body.ex_date;
         var flag = req.body.flag;
+        var cpuid = req.body.cpuid;
 
         /* initition id for primary key */
         
-        advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag);
+        advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid);
+
+        res.send("crotttt")
+
+    });
+
+    app.post('/api/iklanneira2', function(req, res){
+
+        /*declare variable */
+        var conten_iklan = req.body.conten_iklan;
+        var iklantype = req.body.iklantype;
+        var tanggal_kadaluarsa = req.body.ex_date;
+        var flag = req.body.flag;
+        var cpuid = req.body.cpuid;
+
+        /* initition id for primary key */
+        
+        advCont.WriteToDb2(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid);
 
         res.send("crotttt")
 

@@ -62,7 +62,28 @@ contoh post json dengan iklan neiras
 	"conten_iklan": "random",
 	"iklantype":  3,
 	"ex_date": "2018-12-31T13:05:21",
-	"flag": 1
+	"flag": 1,
+	"cpuid": "123456789012345";
+}
+
+```
+
+# Keterangan 
+
+CPU ID masih 15 digit yang 1 dijit adalah Null
+
+## Untuk Versi update redeem
+Post http://52.187.1.94:7269/api/iklanneira2 
+
+contoh post json dengan iklan neiras
+```json
+
+{
+	"conten_iklan": "random",
+	"iklantype":  3,
+	"ex_date": "2018-12-31T13:05:21",
+	"flag": 1,
+	"cpuid": "123456789012345";
 }
 
 ```
