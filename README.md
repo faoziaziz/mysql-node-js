@@ -2,47 +2,14 @@
 
 Neira aplikasis
 
+## Iklan Type Table
+Flag Value|Deskripsi
+----------|---------
+1		| Teks
+2		| Image
+**3**		| **QR**
 
-```sql
-
-CREATE TABLE `NeiraIklanVer2` (
-	`NO` INT(11) NOT NULL AUTO_INCREMENT,
-	`ID_TGL` INT(11) NULL DEFAULT NULL,
-	`UUID` CHAR(50) NULL DEFAULT NULL,
-	`UUID_ENC` CHAR(72) NULL DEFAULT NULL,
-	`Content` CHAR(255) NULL DEFAULT NULL,
-	`ExpiryDate` DATETIME NULL DEFAULT NULL,
-	`TipeIklan` INT(11) NOT NULL DEFAULT '0',
-	`Flag` TINYINT(4) NULL DEFAULT '0',
-	PRIMARY KEY (`NO`)
-)
-COLLATE='utf8mb4_general_ci'
-ENGINE=InnoDB
-AUTO_INCREMENT=2
-;
-
-
-```
-
-just for testing database 
-
-```sql
-CREATE TABLE `NeiraIklanVer2Redeem` (
-	`Id` INT(11) NOT NULL AUTO_INCREMENT,
-	`UUID` VARCHAR(50) NULL DEFAULT NULL,
-	`Flag` VARCHAR(50) NULL DEFAULT NULL,
-	INDEX `Id` (`Id`)
-)
-ENGINE=InnoDB;
-```
-
-Redem table atau yang disebut sebagai NeiraIklanVer2Redeem merupakan table untuk storage data dari device ke Server.
-Flag dari redem adalah sebagai berikut.
-
-Flag Value|Deskription
------------|----------
-0         | Not Redeem Yet
-1          | Sudah diredeem
+yang bisa diimplementasikan yang bold (**QR**)
 
 
 Store Table dari server
