@@ -13,6 +13,8 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
     var teks_uuid = uuidv1()
 
     /* Ecripted */
+    //var encryptedUUID = aesjs.utils.utf8.toBytes(teks_uuid);
+    
     var textBytes = aesjs.utils.utf8.toBytes(teks_uuid);
     
     // The counter is optional, and if omitted will begin at 1
@@ -21,7 +23,7 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
     
     // To print or store the binary data, you may convert it to hex
     var encryptedUUID = aesjs.utils.hex.fromBytes(encryptedBytes);
-
+    
     /* date variable for expiring */
     var expiry_date = Date(tanggal_kadaluarsa);
     /* id timetstamp */
@@ -38,7 +40,7 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
 
     connection.connect(function (err) {
 
-        console.log("wew");
+        
         var sql = "insert into NeiraIklanVer2(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID, MemberID, PadTeks)values (?) ";
         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store, memberid, padTeks];
 
@@ -61,6 +63,8 @@ exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, fla
      var teks_uuid = uuidv1()
  
      /* Ecripted */
+     //var encryptedUUID = aesjs.utils.utf8.toBytes(teks_uuid);
+     
      var textBytes = aesjs.utils.utf8.toBytes(teks_uuid);
      
      // The counter is optional, and if omitted will begin at 1
@@ -69,7 +73,7 @@ exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, fla
      
      // To print or store the binary data, you may convert it to hex
      var encryptedUUID = aesjs.utils.hex.fromBytes(encryptedBytes);
- 
+    
      /* date variable for expiring */
      var expiry_date = Date(tanggal_kadaluarsa);
      /* id timetstamp */
