@@ -1,4 +1,5 @@
 'use strict';
+var response = require('./res');
 
 module.exports = function(app) {
     var todoList = require('../controller/controller');
@@ -32,7 +33,7 @@ module.exports = function(app) {
         
         advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid, memberid, padTeks);
 
-        res.send("crotttt")
+        response.mantaps(0, res);
 
     });
 
@@ -50,8 +51,7 @@ module.exports = function(app) {
         /* initition id for primary key */
         
         advCont.WriteToDb2(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid, memberid, padTeks);
-
-        res.send("crotttt")
+        response.mantaps(0, res);
 
     });
 

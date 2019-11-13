@@ -8,3 +8,23 @@ exports.ok = function(values, res) {
   res.json(data);
   res.end();
 };
+
+exports.mantaps = function(values, res){
+
+  if(values==0){
+    var data = {
+      'kode': values,
+      'pesan': 'OK'
+    }
+    res.json(data);
+    res.end();
+  }
+  else if(values==1){
+    var data = {
+      'kode': values,
+      'pesan': 'Eror'
+    }
+    res.json(data);
+    res.end()
+  }
+}
