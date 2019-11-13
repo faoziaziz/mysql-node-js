@@ -40,7 +40,7 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
 
         console.log("wew");
         var sql = "insert into NeiraIklanVer2(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID)values (?) ";
-        var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, expiry_date, iklan_type, flag,cpuid_store];
+        var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store];
 
         console.log(values)
 
@@ -88,7 +88,7 @@ exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, fla
  
          console.log("wew");
          var sql = "insert into NeiraIklanVer3(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID)values (?) ";
-         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, expiry_date, iklan_type, flag,cpuid_store];
+         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store];
  
          console.log(values)
  
