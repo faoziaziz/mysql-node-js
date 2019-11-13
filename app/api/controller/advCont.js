@@ -7,7 +7,7 @@ const uuidv1 = require('uuid/v1');
 var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 
-exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost, cpuid) {
+exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost, cpuid, memberid, padTeks) {
    // console.log("DI : " + data_iklan + " MC :" + max_count + " jH " + tanggal_kadaluarsa);
     /*create connection to database */
     var teks_uuid = uuidv1()
@@ -39,8 +39,8 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
     connection.connect(function (err) {
 
         console.log("wew");
-        var sql = "insert into NeiraIklanVer2(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID)values (?) ";
-        var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store];
+        var sql = "insert into NeiraIklanVer2(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID, MemberID, PadTeks)values (?) ";
+        var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store, memberid, padTeks];
 
         console.log(values)
 
@@ -55,7 +55,7 @@ exports.WriteToDb = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flag
 
 }
 
-exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost, cpuid) {
+exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, flagPost, cpuid, memberid, padTeks) {
     // console.log("DI : " + data_iklan + " MC :" + max_count + " jH " + tanggal_kadaluarsa);
      /*create connection to database */
      var teks_uuid = uuidv1()
@@ -87,8 +87,8 @@ exports.WriteToDb2 = function (data_iklan, type_iklan_s, tanggal_kadaluarsa, fla
      connection.connect(function (err) {
  
          console.log("wew");
-         var sql = "insert into NeiraIklanVer3(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID)values (?) ";
-         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store];
+         var sql = "insert into NeiraIklanVer3(ID_TGL, UUID, UUID_ENC, Content, ExpiryDate, TipeIklan, Flag, CPUID, MemberID, PadTeks)values (?) ";
+         var values = [idiklan, teks_uuid, encryptedUUID, content_iklan, tanggal_kadaluarsa, iklan_type, flag,cpuid_store, memberid, padTeks];
  
          console.log(values)
  

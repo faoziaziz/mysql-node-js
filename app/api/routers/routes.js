@@ -26,10 +26,11 @@ module.exports = function(app) {
         var tanggal_kadaluarsa = req.body.ex_date;
         var flag = req.body.flag;
         var cpuid = req.body.cpuid;
-
+        var memberid = req.body.memberid;
+        var padTeks = req.body.padTeks;
         /* initition id for primary key */
         
-        advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid);
+        advCont.WriteToDb(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid, memberid, padTeks);
 
         res.send("crotttt")
 
@@ -43,10 +44,12 @@ module.exports = function(app) {
         var tanggal_kadaluarsa = req.body.ex_date;
         var flag = req.body.flag;
         var cpuid = req.body.cpuid;
+        var memberid = req.body.memberid;
+        var padTeks = req.body.padTeks;
 
         /* initition id for primary key */
         
-        advCont.WriteToDb2(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid);
+        advCont.WriteToDb2(conten_iklan, iklantype, tanggal_kadaluarsa, flag, cpuid, memberid, padTeks);
 
         res.send("crotttt")
 
