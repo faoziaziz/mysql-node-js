@@ -1,6 +1,6 @@
 'use strict';
 /* controller to store Neira iklan */
-var response = require('./res');
+var response = require('../controller/res');
 var connection = require('../conn');
 
 exports.neiraAll = function(req, res) {
