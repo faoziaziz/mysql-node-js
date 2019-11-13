@@ -1,5 +1,5 @@
 'use strict';
-var response = require('./res');
+var response = require('../res');
 
 module.exports = function(app) {
     var todoList = require('../controller/controller');

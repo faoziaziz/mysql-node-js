@@ -60,10 +60,12 @@ contoh post json dengan iklan neiras
 
 {
 	"conten_iklan": "random",
-	"iklantype":  3,
+	"iklantype":  2,
 	"ex_date": "2018-12-31T13:05:21",
-	"flag": 1,
-	"cpuid": "123456789012345";
+	"flag": 0,
+	"cpuid": "123456789012345",
+	"memberid":"member1234",
+	"padTeks":"<MemberID>"
 }
 
 ```
@@ -80,10 +82,12 @@ contoh post json dengan iklan neiras
 
 {
 	"conten_iklan": "random",
-	"iklantype":  3,
+	"iklantype":  2,
 	"ex_date": "2018-12-31T13:05:21",
-	"flag": 1,
-	"cpuid": "123456789012345";
+	"flag": 0,
+	"cpuid": "123456789012345",
+	"memberid":"member1234",
+	"padTeks":"<MemberID>"
 }
 
 ```
