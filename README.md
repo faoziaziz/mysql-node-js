@@ -40,6 +40,23 @@ contoh post json dengan iklan neiras
 # Keterangan 
 
 CPU ID masih 15 digit yang 1 dijit adalah Null
+## Untuk Versi update earning
+Post http://52.187.1.94:7269/api/iklanneira1
+
+contoh post json dengan iklan neiras
+```json
+
+{
+	"conten_iklan": "random",
+	"iklantype":  2,
+	"ex_date": "2018-12-31T13:05:21",
+	"flag": 0,
+	"cpuid": "123456789012345",
+	"memberid":"member1234",
+	"padTeks":"<MemberID>"
+}
+
+```
 
 ## Untuk Versi update redeem
 Post http://52.187.1.94:7269/api/iklanneira2 
