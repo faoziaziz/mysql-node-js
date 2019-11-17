@@ -41,7 +41,7 @@ contoh post json dengan iklan neiras
 
 CPU ID masih 15 digit yang 1 dijit adalah Null
 ## Untuk Versi update earning
-Post http://52.187.1.94:7269/api/iklanneira1
+Post http://52.187.1.94:7269/api/iklanneira
 
 contoh post json dengan iklan neiras
 ```json
