@@ -75,3 +75,49 @@ contoh post json dengan iklan neiras
 }
 
 ```
+
+## Untuk table setting 
+### Redeem
+```sql
+CREATE TABLE `NeiraIklanVer2` (
+	`NO` INT(11) NOT NULL AUTO_INCREMENT,
+	`ID_TGL` INT(11) NULL DEFAULT NULL,
+	`UUID` CHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`UUID_ENC` CHAR(72) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`Content` CHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`ExpiryDate` DATETIME NULL DEFAULT NULL,
+	`TipeIklan` INT(11) NOT NULL DEFAULT '0',
+	`Flag` TINYINT(4) NULL DEFAULT '0',
+	`CPUID` CHAR(20) NULL DEFAULT 'CPUID' COLLATE 'utf8mb4_general_ci',
+	`MemberID` CHAR(30) NULL DEFAULT 'MemberId' COLLATE 'utf8mb4_general_ci',
+	`PadTeks` CHAR(30) NULL DEFAULT 'PadTeks' COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`NO`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2
+;
+
+```
+### Earning
+```sql
+CREATE TABLE `NeiraIklanVer3` (
+	`NO` INT(11) NOT NULL AUTO_INCREMENT,
+	`ID_TGL` INT(11) NULL DEFAULT NULL,
+	`UUID` CHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`UUID_ENC` CHAR(72) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`Content` CHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`ExpiryDate` DATETIME NULL DEFAULT NULL,
+	`TipeIklan` INT(11) NOT NULL DEFAULT '0',
+	`Flag` TINYINT(4) NULL DEFAULT '0',
+	`CPUID` CHAR(20) NULL DEFAULT 'CPUID' COLLATE 'utf8mb4_general_ci',
+	`MemberID` CHAR(30) NULL DEFAULT 'MemberId' COLLATE 'utf8mb4_general_ci',
+	`PadTeks` CHAR(30) NULL DEFAULT 'PadTeks' COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`NO`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2
+;
+```
+
